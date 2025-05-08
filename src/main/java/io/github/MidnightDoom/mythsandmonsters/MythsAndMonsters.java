@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MythsAndMonsters.MOD_ID)
@@ -31,7 +32,7 @@ public class MythsAndMonsters
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         // context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-
+        GeckoLib.initialize();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
