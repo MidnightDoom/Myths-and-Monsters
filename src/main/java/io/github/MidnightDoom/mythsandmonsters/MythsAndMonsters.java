@@ -1,6 +1,7 @@
 package io.github.MidnightDoom.mythsandmonsters;
 
 import com.mojang.logging.LogUtils;
+import io.github.MidnightDoom.mythsandmonsters.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,6 +25,10 @@ public class MythsAndMonsters
     public MythsAndMonsters(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+
+        // Register items
+        ModItems.register(modEventBus);
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
