@@ -14,7 +14,12 @@ public class ModItems {
 
     // Name must be lowercase a-z, 0-9, - and _ only
     // Add properties after Item.Properties().<here>
+    // The variable should be all caps
+
     public static final RegistryObject<Item> NETHERITE_NUGGET = ITEMS.register("netherite_nugget",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).tab(ModItemGroups.MYTHS_AND_MONSTERS_MISC_TAB))
+    );
+    public static final RegistryObject<Item> NETHERITE_SCRAP_SCRAP = ITEMS.register("netherite_scrap_scrap",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).tab(ModItemGroups.MYTHS_AND_MONSTERS_MISC_TAB))
     );
 

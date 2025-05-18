@@ -2,6 +2,7 @@ package io.github.MidnightDoom.mythsandmonsters;
 
 import com.mojang.logging.LogUtils;
 import io.github.MidnightDoom.mythsandmonsters.item.ModItems;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
