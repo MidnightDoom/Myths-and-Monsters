@@ -17,6 +17,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.NETHERITE_NUGGET.get());
-        //basicItem(ModItems.NETHERITE_SCRAP_SCRAP.get());
+        basicItem(ModItems.NETHERITE_SCRAP_SCRAP.get());
     }
 }
