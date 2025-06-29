@@ -1,7 +1,10 @@
 package io.github.MidnightDoom.mythsandmonsters;
 
 import com.mojang.logging.LogUtils;
+import io.github.MidnightDoom.mythsandmonsters.entity.ModEntityTypes;
+import io.github.MidnightDoom.mythsandmonsters.entity.client.hunDun.HunDunRenderer;
 import io.github.MidnightDoom.mythsandmonsters.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -40,6 +43,8 @@ public class MythsAndMonsters
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
+        ModEntityTypes.register(modEventBus);
+
         GeckoLib.initialize();
     }
 
@@ -62,7 +67,7 @@ public class MythsAndMonsters
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             // Some client setup code
-
+            EntityRenderers.register(ModEntityTypes.HUN_DUN.get(), HunDunRenderer::new);
         }
     }
 }
